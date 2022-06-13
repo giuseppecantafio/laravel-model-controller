@@ -8,9 +8,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 class="text-center">Ciao <i class="fa-brands fa-android"></i></h1>
-    @foreach ($movies as $movie)
-    <h2 class="text-center">{{$movie->title}}</h2>
-    @endforeach
+    <h1 class="text-center">Ciao questi sono i film che mi piacciono! <i class="fa-solid fa-film"></i></h1>
+    <div class="container">
+        <div class="row row-cols-5">
+                @foreach ($movies as $movie)
+                <div class="col g-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{$movie->title}}</h5>
+                            <p class="card-text">Titolo originale: {{$movie->original_title}}</p>
+                            <p>Data: {{$movie->date}}<br /> Voto medio: {{$movie->vote}}</p>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+        </div>
+    </div>
 </body>
 </html>
