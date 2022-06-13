@@ -9,5 +9,8 @@
 </head>
 <body>
     <h1 class="text-center">Ciao <i class="fa-brands fa-android"></i></h1>
+    @foreach ($movies as $movie)
+    <h2 class="text-center">{{$movie->title}}</h2>
+    @endforeach
 </body>
 </html>
